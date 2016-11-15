@@ -39,7 +39,7 @@ void Particle::update(float multiplier)
     if (mLifeSpan > 0){
         mLifeSpan -= 2.f;
     }
-    
+
 }
 //-------------------------------------
 void Particle::draw()
@@ -51,7 +51,6 @@ void Particle::draw()
         // do some sparkle!
         ofSetColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255));
     };
-    
     // closer particle is smaller
     ofDrawCircle(mPosition, 3.f * ofMap(mLifeSpan, 0, 255.f, 0, 1.f));
     
